@@ -40,7 +40,8 @@ public class TimerCountdown : MonoBehaviour
         if (secondsLeft == 0)
         {
             //StartCoroutine(StopTimer());
-            
+            Time.timeScale = 2;
+
             rewindPlayer.StartRewind();
             rewindRed.StartRewind();
             rewindBlue.StartRewind();
@@ -57,11 +58,14 @@ public class TimerCountdown : MonoBehaviour
                 secondsLeft = 10;
                 //loop++;
             }
+
+            //Time.timeScale = 1;
         }
     }
 
     IEnumerator TimerTake()
     {
+        Time.timeScale = 1;
         takingAway = true;
         yield return new WaitForSeconds(1);
         secondsLeft -= 1;
