@@ -22,5 +22,10 @@ public class Waypoints : MonoBehaviour
         }
 
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
+
+        if(Time.timeScale == 2)
+        {
+            speed = 2.5f;
+        }
     }
 }
