@@ -8,26 +8,13 @@ public class RewindTime : MonoBehaviour
     public float recordTime = 10f;
 
     List<PointInTime> pointsInTime;
-
     Rigidbody rb;
+
     void Start()
     {
         pointsInTime = new List<PointInTime>();
         rb = GetComponent<Rigidbody>();
     }
-
-   /* void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            StartRewind();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Return))
-        {
-            StopRewind();
-        }
-    }*/
 
     void FixedUpdate()
     {
@@ -71,12 +58,13 @@ public class RewindTime : MonoBehaviour
     public void StartRewind()
     {
         isRewinding = true;
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
     }
 
     public void StopRewind()
     {
         isRewinding = false;
-        rb.isKinematic = false;
+        Time.timeScale = 1;
+        //rb.isKinematic = false;
     }
 }

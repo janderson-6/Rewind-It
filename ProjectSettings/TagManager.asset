@@ -7,6 +7,7 @@ TagManager:
   - RewindPlayer
   - RewindRed
   - RewindBlue
+  - EndTrigger
   layers:
   - Default
   - TransparentFX

@@ -21,8 +21,8 @@ public class TimerCountdown : MonoBehaviour
     void Start()
     {
         rewindPlayer = GameObject.FindGameObjectWithTag("RewindPlayer").GetComponent<RewindTime>();
-        rewindRed = GameObject.FindGameObjectWithTag("RewindRed").GetComponent<RewindTime>();
-        rewindBlue = GameObject.FindGameObjectWithTag("RewindBlue").GetComponent<RewindTime>();
+        //rewindRed = GameObject.FindGameObjectWithTag("RewindRed").GetComponent<RewindTime>();
+        //rewindBlue = GameObject.FindGameObjectWithTag("RewindBlue").GetComponent<RewindTime>();
 
         minutes = Mathf.FloorToInt(secondsLeft / 60);
         seconds = Mathf.FloorToInt(secondsLeft % 60);
@@ -43,8 +43,8 @@ public class TimerCountdown : MonoBehaviour
             Time.timeScale = 2;
 
             rewindPlayer.StartRewind();
-            rewindRed.StartRewind();
-            rewindBlue.StartRewind();
+            //rewindRed.StartRewind();
+            //rewindBlue.StartRewind();
 
             if(loop == 3)
             {
@@ -56,6 +56,7 @@ public class TimerCountdown : MonoBehaviour
                 timeText.GetComponent<Text>().text = "00:10";
 
                 secondsLeft = 10;
+                //Time.timeScale = 1;
                 //loop++;
             }
 
@@ -65,7 +66,7 @@ public class TimerCountdown : MonoBehaviour
 
     IEnumerator TimerTake()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         takingAway = true;
         yield return new WaitForSeconds(1);
         secondsLeft -= 1;
@@ -89,10 +90,8 @@ public class TimerCountdown : MonoBehaviour
 
     IEnumerator StopTimer()
     {
-        Debug.Log("hi");
         takingAway = false;
         yield return new WaitForSeconds(10);
-        Debug.Log("hi after 10");
 
         loop++;
         takingAway = false;

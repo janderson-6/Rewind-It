@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisableGame : MonoBehaviour
 {
     public GameObject gameManager;
     public GameObject panel;
+    public Text TimerDisplay;
 
     public int secondsLeft = 40;
     public bool takingAway = false;
@@ -23,6 +25,7 @@ public class DisableGame : MonoBehaviour
 
         if (secondsLeft == 0)
         {
+            TimerDisplay.gameObject.SetActive(false);
             gameManager.SetActive(false);
             panel.SetActive(true);
             Time.timeScale = 0f;

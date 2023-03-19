@@ -1,22 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    
+
     private float horizontal;
     private float vertical;
+
+    public GameObject gameManager;
+    public GameObject panel;
+    public Text TimerDisplay;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed = 3;
     [SerializeField] private float jumpingPower = 10f;
 
-    //public Transform ColliderTransform;
+    void Start()
+    {
+        panel.SetActive(false);
+    }
 
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            Debug.Log("shift");
+        }
     }
     
     private void FixedUpdate()
@@ -30,6 +45,19 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 jump = new Vector3(0, 1, 0);
             rb.AddForce(jump * jumpingPower);
+        }
+    }
+
+    private void OnTriggerEnter(Collider target)
+    {
+        if (target.gameObject.tag.Equals("EndTrigger") == true)
+        {
+            
+
+            TimerDisplay.gameObject.SetActive(false);
+            gameManager.SetActive(false);
+            panel.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
