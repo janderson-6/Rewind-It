@@ -4391,7 +4391,7 @@ Transform:
   m_GameObject: {fileID: 1096114411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.65, y: 0, z: -1.5}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 1104744907}
   m_RootOrder: 1
@@ -6159,7 +6159,7 @@ MonoBehaviour:
   TimerDisplay: {fileID: 1519549927}
   rb: {fileID: 1490256687}
   speed: 4
-  jumpingPower: 300
+  jumpingPower: 125
 --- !u!54 &1490256687
 Rigidbody:
   m_ObjectHideFlags: 0
