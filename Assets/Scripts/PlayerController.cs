@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    
-
     private float horizontal;
     private float vertical;
 
@@ -27,11 +25,6 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            Debug.Log("shift");
-        }
     }
     
     private void FixedUpdate()
@@ -52,8 +45,6 @@ public class PlayerController : MonoBehaviour
     {
         if (target.gameObject.tag.Equals("EndTrigger") == true)
         {
-            
-
             TimerDisplay.gameObject.SetActive(false);
             gameManager.SetActive(false);
             panel.SetActive(true);

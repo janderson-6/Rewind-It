@@ -27,5 +27,10 @@ public class Waypoints : MonoBehaviour
         {
             speed = 2.5f;
         }
+
+        else
+        {
+            speed = 5f;
+        }
     }
 }

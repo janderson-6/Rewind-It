@@ -6,8 +6,12 @@ TagManager:
   tags:
   - RewindPlayer
   - RewindRed
-  - RewindBlue
   - EndTrigger
+  - RedTrigger
+  - BlueTrigger
+  - BlueDoor1
+  - BlueDoor2
+  - BlueCube
   layers:
   - Default
   - TransparentFX

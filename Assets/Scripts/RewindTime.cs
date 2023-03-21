@@ -63,6 +63,7 @@ public class RewindTime : MonoBehaviour
 
     public void StopRewind()
     {
+        Debug.Log("stop rewind here");
         isRewinding = false;
         Time.timeScale = 1;
         //rb.isKinematic = false;

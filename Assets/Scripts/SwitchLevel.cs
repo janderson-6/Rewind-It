@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class SwitchLevel : MonoBehaviour
 {
-    //public TimerCountdown countdown;
-
     public GameObject levelOne;
     public GameObject levelTwo;
     //public GameObject levelThree;
@@ -34,14 +32,12 @@ public class SwitchLevel : MonoBehaviour
             case 2:
                 levelTwo.SetActive(true);   //level 2 object is active
                 levelOne.SetActive(false);  //disable level 1 object
-                
+
                 //set camera position
                 Camera.main.transform.position = Vector3.Lerp(transform.position, new Vector3(20, 16, -15), 1f);
 
                 gameManager.GetComponent<TimerCountdown>().enabled = true;
-                //player.GetComponent<PlayerController>().enabled = true;
 
-                //countdown.secondsLeft = 10;
                 Time.timeScale = 1;
                 TimerDisplay.gameObject.SetActive(true);
                 gameManager.SetActive(true);

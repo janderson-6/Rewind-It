@@ -2,10 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerCountdown : MonoBehaviour
+public class TimerCountdownNoRed : MonoBehaviour
 {
     RewindTime rewindPlayer;
-    RewindTime rewindRed;
 
     public GameObject timeText;
 
@@ -20,7 +19,6 @@ public class TimerCountdown : MonoBehaviour
     void Start()
     {
         rewindPlayer = GameObject.FindGameObjectWithTag("RewindPlayer").GetComponent<RewindTime>();
-        rewindRed = GameObject.FindGameObjectWithTag("RewindRed").GetComponent<RewindTime>();
 
         minutes = Mathf.FloorToInt(secondsLeft / 60);
         seconds = Mathf.FloorToInt(secondsLeft % 60);
@@ -40,9 +38,8 @@ public class TimerCountdown : MonoBehaviour
             Time.timeScale = 2;
 
             rewindPlayer.StartRewind();
-            rewindRed.StartRewind();
-            
-            if(loop == 3)
+
+            if (loop == 3)
             {
                 timeText.SetActive(false);
             }
@@ -66,7 +63,7 @@ public class TimerCountdown : MonoBehaviour
 
         timeText.GetComponent<Text>().text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if(secondsLeft == 0)
+        if (secondsLeft == 0)
         {
             StartCoroutine(StopTimer());
             takingAway = true;
