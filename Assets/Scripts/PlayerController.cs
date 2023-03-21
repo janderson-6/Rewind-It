@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed = 3;
-    [SerializeField] private float jumpingPower = 10f;
+    //[SerializeField] private float jumpingPower = 10f;
 
     void Start()
     {
@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Vector3 jump = new Vector3(0, 1, 0);
-            rb.AddForce(jump * jumpingPower);
+            Vector3 jump = new Vector3(0, 100, 0);
+            rb.AddForce(jump /** jumpingPower*/);
         }
     }
 
