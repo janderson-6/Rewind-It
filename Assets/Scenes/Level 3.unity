@@ -190,7 +190,6 @@ MonoBehaviour:
   TimerDisplay: {fileID: 148493365}
   rb: {fileID: 37023062}
   speed: 4
-  jumpingPower: 300
 --- !u!65 &37023061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -739,7 +738,7 @@ Transform:
   m_GameObject: {fileID: 482193295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.125, y: -1, z: 0.25}
-  m_LocalScale: {x: 0.25, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 1, z: 0.55625}
   m_Children: []
   m_Father: {fileID: 837491722}
   m_RootOrder: 2
@@ -1369,7 +1368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6838481950248777157, guid: 621400fd94cfc6547a5ad890aff1b512, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.9617276
+      value: 2.997
       objectReference: {fileID: 0}
     - target: {fileID: 6838481950248777157, guid: 621400fd94cfc6547a5ad890aff1b512, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1910,7 +1909,7 @@ Transform:
   m_GameObject: {fileID: 1578224775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.75, y: 0, z: 0.25}
-  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.55625}
   m_Children: []
   m_Father: {fileID: 837491722}
   m_RootOrder: 1
@@ -2005,7 +2004,7 @@ Transform:
   m_GameObject: {fileID: 1642702623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.125, y: -2, z: 0.25}
-  m_LocalScale: {x: 0.25, y: 1, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 1, z: 0.55625}
   m_Children: []
   m_Father: {fileID: 837491722}
   m_RootOrder: 3

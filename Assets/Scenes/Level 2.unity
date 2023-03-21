@@ -954,7 +954,6 @@ MonoBehaviour:
   TimerDisplay: {fileID: 737456228}
   rb: {fileID: 642557905}
   speed: 4
-  jumpingPower: 300
 --- !u!65 &642557904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2312,7 +2311,7 @@ Transform:
   m_GameObject: {fileID: 1692070786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.5009995, y: -1, z: 0.0073800087}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1.2125}
   m_Children: []
   m_Father: {fileID: 600070010}
   m_RootOrder: 2
