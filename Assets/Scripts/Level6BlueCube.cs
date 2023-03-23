@@ -6,13 +6,20 @@ public class Level6BlueCube : MonoBehaviour
 
     public int OnTriggerStay(Collider other)
     {
-        blue = 1;
-
         if (other.gameObject.tag.Equals("BlueTrigger") == true)
         {
+            blue = 1;
             return blue;
         }
 
         return 0;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("BlueTrigger"))
+        {
+            blue = 0;
+        }
     }
 }
