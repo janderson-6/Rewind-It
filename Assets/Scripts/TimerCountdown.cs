@@ -85,8 +85,11 @@ public class TimerCountdown : MonoBehaviour
     IEnumerator StopTimer()
     {
         takingAway = false;
-        rewind.Play();
-        rewindIcon.SetActive(true);
+        if (loop == 0)
+        {
+            rewind.Play();
+            rewindIcon.SetActive(true);
+        }
 
         yield return new WaitForSeconds(10);
 

@@ -29,6 +29,11 @@ public class SwitchLevel : MonoBehaviour
     {
         if(sceneName == "Main")
         {
+            SceneManager.LoadScene("Tutorial");
+        }
+
+        else if (sceneName == "Tutorial")
+        {
             SceneManager.LoadScene("Level 1");
         }
 
