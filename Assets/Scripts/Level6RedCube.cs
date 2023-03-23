@@ -19,6 +19,7 @@ public class Level6RedCube : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RedTrigger"))
         {
+            Debug.Log("exit");
             red = 0;
         }
     }

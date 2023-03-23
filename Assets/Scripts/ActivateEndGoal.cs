@@ -18,5 +18,10 @@ public class ActivateEndGoal : MonoBehaviour
         {
             EndGoal.SetActive(true);
         }
+
+        else
+        {
+            EndGoal.SetActive(false);
+        }
     }
 }
