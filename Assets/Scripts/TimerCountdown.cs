@@ -7,7 +7,10 @@ public class TimerCountdown : MonoBehaviour
     RewindTime rewindPlayer;
     RewindTime rewindRed;
 
+    public AudioSource rewind;
+
     public GameObject timeText;
+    public GameObject rewindIcon;
 
     public int secondsLeft;
     public bool takingAway = false;
@@ -58,6 +61,7 @@ public class TimerCountdown : MonoBehaviour
     IEnumerator TimerTake()
     {
         takingAway = true;
+        rewindIcon.SetActive(false);
         yield return new WaitForSeconds(1);
         secondsLeft -= 1;
 
@@ -81,6 +85,9 @@ public class TimerCountdown : MonoBehaviour
     IEnumerator StopTimer()
     {
         takingAway = false;
+        rewind.Play();
+        rewindIcon.SetActive(true);
+
         yield return new WaitForSeconds(10);
 
         loop++;
