@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     public GameObject panel;
     public Text TimerDisplay;
 
+    public Text wKey;
+    public Text aKey;
+    public Text sKey;
+    public Text dKey;
+
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed = 3;
     //[SerializeField] private float jumpingPower = 10f;
@@ -25,6 +30,46 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        if (Input.GetAxis("Vertical") > 0)    //pressing 'W'
+        {
+            wKey.color = Color.yellow;
+        }
+
+        else
+        {
+            wKey.color = Color.white;
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)    //pressing 'A'
+        {
+            aKey.color = Color.yellow;
+        }
+
+        else
+        {
+            aKey.color = Color.white;
+        }
+
+        if (Input.GetAxis("Vertical") < 0)    //pressing 'S'
+        {
+            sKey.color = Color.yellow;
+        }
+
+        else
+        {
+            sKey.color = Color.white;
+        }
+
+        if (Input.GetAxis("Horizontal") > 0)    //pressing 'D'
+        {
+            dKey.color = Color.yellow;
+        }
+
+        else
+        {
+            dKey.color = Color.white;
+        }
     }
     
     private void FixedUpdate()
