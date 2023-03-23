@@ -436,8 +436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Keep trying. \nMess around with the different cubes to understand what
-    they all do "
+  m_Text: Keep trying, pay attention to each cube mechanic.
 --- !u!222 &152750867
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3120,7 +3119,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay
+  m_Text: Keep Learning
 --- !u!222 &1470931023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4038,8 +4037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012159, y: 80.967}
-  m_SizeDelta: {x: 395.4731, y: 88.065}
+  m_AnchoredPosition: {x: -0.000012159, y: 87.75729}
+  m_SizeDelta: {x: 395.4731, y: 74.4844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753311228
 MonoBehaviour:
@@ -4074,7 +4073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: keep messing around until you feel like you understand the mechanics
+  m_Text: Do you want to keep learning the mechanics or try Level 1?
 --- !u!222 &1753311229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5193,9 +5192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Next Level
-
-'
+  m_Text: Level 1
 --- !u!222 &2004312845
 CanvasRenderer:
   m_ObjectHideFlags: 0
