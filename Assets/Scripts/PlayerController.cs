@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     public GameObject panel;
     public Text TimerDisplay;
 
-    public Text wKey;
-    public Text aKey;
-    public Text sKey;
-    public Text dKey;
+    public Image wPanel;
+    public Image aPanel;
+    public Image sPanel;
+    public Image dPanel;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float speed = 3;
@@ -33,42 +33,42 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxis("Vertical") > 0)    //pressing 'W'
         {
-            wKey.color = Color.yellow;
+            wPanel.color = Color.black;
         }
 
         else
         {
-            wKey.color = Color.white;
+            wPanel.color = Color.grey;
         }
 
         if (Input.GetAxis("Horizontal") < 0)    //pressing 'A'
         {
-            aKey.color = Color.yellow;
+            aPanel.color = Color.black;
         }
 
         else
         {
-            aKey.color = Color.white;
+            aPanel.color = Color.grey;
         }
 
         if (Input.GetAxis("Vertical") < 0)    //pressing 'S'
         {
-            sKey.color = Color.yellow;
+            sPanel.color = Color.black;
         }
 
         else
         {
-            sKey.color = Color.white;
+            sPanel.color = Color.grey;
         }
 
         if (Input.GetAxis("Horizontal") > 0)    //pressing 'D'
         {
-            dKey.color = Color.yellow;
+            dPanel.color = Color.black;
         }
 
         else
         {
-            dKey.color = Color.white;
+            dPanel.color = Color.grey;
         }
     }
     
